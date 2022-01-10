@@ -18,6 +18,12 @@
   </footer>
 
   <aside class="price">
+  
     <%= humanized_money_with_symbol number_to_currency(product.price) %>
   </aside>
+  <% if product.quantity == 0 %>
+  <aside class="quantity">
+  <p> SOLD OUT! </p>
+</aside>
+<% end %>
 </article>
